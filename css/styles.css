@@ -87,3 +87,61 @@ footer {
     color: white;
     margin-top: 50px;
 }
+
+/* Contact page styles */
+form {
+    width:500px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 20px;
+    font-family: Verdana;
+    font-weight: 800;
+}
+
+input[type="text"], textarea,select {
+    background: #ededed;
+    border: none;
+    outline: none;
+    width: 250px;
+}
+
+.zoneRadio span {
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.zoneTextarea label {
+    float: left;
+}
+
+
+.zoneTextarea div {
+    font-size: 12px;
+    margin-left: 170px;
+    margin-top: 10px;
+}
+
+.required-fields {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+input[type=submit] {
+    float: right;
+    border:none;
+    background: black;
+    color:white;
+    text-transform: uppercase;
+    padding: 3px 8px 5px;
+}
