@@ -6,46 +6,46 @@
     <link rel="stylesheet" href="css/styles.css">
  <script type="text/javascript">
         
-    // Les boucles
+// Exemple avec les objets
+    var admis =  true;
+    var etudiants = [
+        {
+            nom : 'Pierre',
+            moyenne: '15',
+            admis: true
+        },{
+            nom : 'Paul',
+            moyenne: '10',
+            admis: true
+        },
+        {
+            nom : 'Jacques',
+            moyenne: '8',
+            admis: false
+        },
+        {
+            nom : 'Manon',
+            moyenne: '5',
+            admis: false
+        }
+    ]
+    console.log(etudiants[0])
+    console.log(etudiants[1])
+    console.log(etudiants[2])
+    console.log(etudiants[3])
     
-    /**
-     * La boucle For (Pour Chaque conditions)
-    */
-    for (var i = 0; i < 5; i++) {
-        console.log('La boucle for ' + i)
-    }
-    /**
-     *  La boucle while (TANT QUE CONDITIONS)
-     */
-    
-    var i =0;
-    while(i < 3){
-        console.log('La boucle while ' +i)
-        i++;
-    }
-    /**
-     * La boucle do while (FAIT UNE FOIS ET APRES VERIFIE LA CONDITION)
-     */
-    var j = 0;
-    do{
-        console.log('La boucle do while '+j)
-        j++
-    }while(j < 3)
-
-   
-    // // Nombre Premier
-    // /**
-    //  * Un nombre est premier s'il n'est divible que par 1 ou lui-méme
-    //  */
-    // var nbrePremier = prompt('Entrez un nombre')
-    
-    // for (var i = 2; i < nbrePremier; i++) {
-    //     if (nbrePremier % i === 0) {
-    //         console.log( nbrePremier + ' n\'est pas premier car il est divible par ' + i)
-    //         break
+    // console.log('Liste des etudiants')
+    // for (var i = 0; i < etudiants.length; i++) {
+    //     //console.log(etudiants[i])
+    //     var etudiant = etudiants[i]
+    //     //console.log(etudiant.nom)
+    //     //console.log(etudiant.nom +' a une moyenne de '+ etudiant.moyenne)
+    //     // Faire une liste des admis et non admis
+    //     if (etudiant.moyenne >= 10 && admis) {
+    //         console.log(etudiant.nom + ' est admis ' + 'avec ' + etudiant.moyenne + ' de moyenne')
     //     }
     //     else{
-    //         console.log(nbrePremier + ' est un nombre premier')
+    //         console.log(etudiant.nom + ' est non admis')
     //     }
     // }
     </script>
