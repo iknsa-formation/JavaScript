@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <title>JavaScript Course - IKNSA</title>
   </head>
-  <div id="test">
+  <div id="test1">
+      <p>
+          Lorem ipsum dolor sit amet.
+      </p>
+  </div>
+
+  <div id="test2">
       <p>
           Lorem ipsum dolor sit amet.
       </p>
@@ -12,9 +18,9 @@
   <body>
     <!-- Page Content -->
     <script>
-        console.log(document.getElementById('test').innerHTML);
-        document.getElementById('test').innerHTML = '<a href="#"><strong>Modification avec le JavaScript</strong></a>';
-        console.log(document.getElementById('test').innerHTML);
+        console.log(document.getElementById('test1').innerHTML);
+        document.getElementById('test2').innerHTML = '<a href="#"><strong>Modification avec le JavaScript</strong></a>';
+        console.log(document.getElementById('test2').innerHTML);
     </script>
   </body>
 </html>
