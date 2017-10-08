@@ -6,24 +6,15 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <script type="text/javascript">
-        
-        var numero = 06;
+        var prenoms = ['Moussa', 'Noémie', 'Robert', 'Jean'];
 
-        if (numero == 17) {
-            console.log("La police");
-        }
-        else if (numero == 18) {
-            console.log("Les pompiers");
-        }
-        else if (numero == 0800) {
-            console.log("Numero vert");
-        }
-        else if (numero == 06) {
-            console.log("Numero mobile");
-        }
-        else{
-            console.log("oups !!!");
-        }
+      for(i=0; i < prenoms.length; i++) {
+   if(prenoms[i] === 'Robert') {
+       prenoms[i] = 'Dujardin';
+   }
+   alert(prenoms[i]);
+}
+
     </script>
 
   </head>
