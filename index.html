@@ -3,24 +3,102 @@
   <head>
     <meta charset="utf-8">
     <title>JavaScript Course - IKNSA</title>
-  </head>
-  <div id="test1">
-      <p>
-          Lorem ipsum dolor sit amet.
-      </p>
-  </div>
+    <link rel="stylesheet" href="css/styles.css">
+<style type="text/css">
+    .newClass {
+        color: blue;
+    }
 
-  <div id="test2">
-      <p>
-          Lorem ipsum dolor sit amet.
-      </p>
-  </div>
+    #newId {
+        color: red;
+    }
+</style>
+     
+  </head>
+ 
   <body>
     <!-- Page Content -->
-    <script>
-        console.log(document.getElementById('test1').innerHTML);
-        document.getElementById('test2').innerHTML = '<a href="#"><strong>Modification avec le JavaScript</strong></a>';
-        console.log(document.getElementById('test2').innerHTML);
+    <header>
+        <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="breadcrumb">
+            <span>You are here</span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page.html">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+    
+
+    <main>
+        <h1>My big website</h1>
+
+        <section>
+            my big freaking slider
+        </section>
+
+        <section>
+         <div id="test1">
+      <p>
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+
+      <div id="test2">
+          <p>
+              Lorem ipsum dolor sit amet.
+          </p>
+      </div>
+            <article>
+                <h2>Le javascript est cool!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </article>
+            <article>
+                <h2>getElementById</h2>
+               <div id="monId">
+                   Ceci est un test ...
+               </div>
+            </article>
+            <article>
+                <h2>getElementsByClassName </h2>
+                <p></p>
+                <div class="maClasse">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </article>
+        </section>
+    </main>
+
+     <div id="test">sdsfsdf</div>
+ 
+   <script>
+      console.log(document.getElementById('test'));
+   </script>
+
+
+    <footer>
+        copyright @iknsa.com
+    </footer>
+  <script src="js/demo.js">
+        
     </script>
   </body>
 </html>
