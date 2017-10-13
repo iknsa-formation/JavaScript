@@ -168,3 +168,10 @@ input[type=submit] {
     text-transform: uppercase;
     padding: 3px 8px 5px;
 }
+
+.newColor {
+    color: red;
+}
+.newColorMouse {
+    color: blue;
+}

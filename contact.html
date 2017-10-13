@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>JavaScript Course - IKNSA</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="js/contact.js"></script>
   </head>
   <body>
     <!-- Page Content -->
@@ -29,6 +28,17 @@
     
 
     <main>
+    <section>
+        <h1>Les évenements</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
         <h1>Get in touch</h1>
         <form method="post"   name="formul"  onSubmit="return verif();" action="#" > 
             <div class="form-group zoneRadio">
@@ -39,7 +49,7 @@
 
             <div class="form-group">
                 <label for="firstname">FirstName*:</label>
-                <input type="text" name="firstname" id="firstname">
+                <input type="text" name="firstname" id="firstname"">
             </div>
 
             <div class="form-group">
@@ -54,7 +64,8 @@
 
             <div class="form-group">
                 <label for="tel">Tel:</label>
-                <input type="text" class="tel" name="tel" id="tel">
+                <input type="text" class="tel" name="tel" id="tel" maxlength="10">
+                <div id="error"></div>
             </div>
 
             <div class="form-group zoneTextarea">
@@ -81,5 +92,6 @@
     <footer>
         copyright @iknsa.com
     </footer>
+    <script type="text/javascript" src="js/contact.js"></script>
   </body>
 </html>

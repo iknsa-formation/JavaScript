@@ -1,8 +1,84 @@
+/*
+* evenement changer la couleur de la div
+*/
+var change = document.querySelector("p");
+
+// methode 1
+color = function () {
+ change.classList.add("newColor") 
+}
+
+//Methode 2
+change.addEventListener('click', function(){
+  //change.classList.add("newColor") 
+  change.classList.toggle("newColor") 
+});
+
+
+//Methode 2 - autre exemple avec la souris
+// change.addEventListener('mouseover', function(){
+//   change.classList.add("newColorMouse") 
+// });
+
+// change.addEventListener('mouseout', function(){
+//   change.classList.remove("newColorMouse") 
+// });
+
+
+var keyup = document.querySelector("#firstname");
+     keyup.addEventListener('keyup', function (e) {
+        console.log(String.fromCharCode(e.keyCode))
+
+    if (keyup.value.length > 0) {
+      keyup.style.backgroundColor="white";
+      keyup.style.borderColor = "red";
+    }
+    else {
+      keyup.style.backgroundColor="#f2dede";
+    }
+  });
+
+var tel = document.querySelector("#tel");
+ tel.addEventListener('keypress', function (e) {
+    //Affichage des caractéres saisies avec fromCharCode
+    //console.log(String.fromCharCode(e.keyCode))
+  if ( isNaN(tel.value) || tel.value != 0) {
+      document.getElementById('error').innerHTML = '<p style="color:red">Vous n\'avez pas le droit de saisir de caractére Alpha</p>';
+    e.preventDefault();
+  }
+  else {
+    document.getElementById('error').innerHTML = '';
+  }
+});
+
+
+// création de la fonction et appel dans mon input
+function change() {
+  var change = document.querySelector("#email");
+    change.addEventListener('change', function(e) {
+        console.log(e)
+    })
+}
+function keydown() {
+  var keydown = document.querySelector("#lastname");
+   keydown.addEventListener('keydown', function (e) {
+      console.log(e)
+   })
+}
+
+function keyup() {
+  var keyup = document.querySelector("#firstname");
+     keyup.addEventListener('keyup', function (e) {
+        console.log(e)
+     })
+}
+
+/* FIN sur les evenements*/
+
 function verif()
 {
     var male = document.getElementById('mr').checked;
     var female = document.getElementById('miss').checked;
-    console.log(male)
     if (!male && !female)  {
    
       alert("vous devez selectionné votre civilité");
@@ -29,25 +105,20 @@ function verif()
      return false;
     }
 
-    // var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/;
-    // if (regex.test(document.getElementById('email').value))  
-    // {  
-    //   return true;
-    // }
-    // else{
-    //   alert("Entrez email valide!");
-    //   document.formul.email.focus();
-    //   document.formul.email.style.backgroundColor = "#f2dede";
-    //   return false;
-    // }
+    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/;
+    if (!regex.test(document.getElementById('email').value))  
+    {  
+      alert("Entrez email valide!");
+      document.formul.email.focus();
+      document.formul.email.style.backgroundColor = "#f2dede";
+      return false;
+    }
 
-    var mobile = /^(01|02|03|04|05|06|08|0033|\+33)[0-9]{8}/;
-    //var mobile = /(0|\+33\s?)[6|7](\s?\d{2}){4}/;
+    //var mobile = /^(01|02|03|04|05|06|08|0033|\+33)[0-9]{8}/;
+    var mobile = /(0|\+33\s?)[6|7](\s?\d{2}){4}/;
 
-    if (mobile.test(document.getElementById('tel').value))
+    if (!mobile.test(document.getElementById('tel').value))
     {
-      return true;
-    }else{
         alert(" Entrez un numero de téléphone valide ");
        document.formul.tel.focus();
        document.formul.tel.style.backgroundColor = "#f2dede";
