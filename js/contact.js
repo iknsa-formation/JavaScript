@@ -31,7 +31,6 @@ var keyup = document.querySelector("#firstname");
 
     if (keyup.value.length > 0) {
       keyup.style.backgroundColor="white";
-      keyup.style.borderColor = "red";
     }
     else {
       keyup.style.backgroundColor="#f2dede";
