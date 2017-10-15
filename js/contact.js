@@ -33,7 +33,7 @@ var keyup = document.querySelector("#firstname");
       keyup.style.backgroundColor="white";
     }
     else {
-      keyup.style.backgroundColor="#f2dede";
+      keyup.style.backgroundColor="red";
     }
   });
 
@@ -41,7 +41,7 @@ var tel = document.querySelector("#tel");
  tel.addEventListener('keypress', function (e) {
     //Affichage des caractéres saisies avec fromCharCode
     //console.log(String.fromCharCode(e.keyCode))
-  if ( isNaN(tel.value) || tel.value != 0) {
+  if ( isNaN(tel.value) ) {
       document.getElementById('error').innerHTML = '<p style="color:red">Vous n\'avez pas le droit de saisir de caractére Alpha</p>';
     e.preventDefault();
   }
@@ -113,8 +113,8 @@ function verif()
       return false;
     }
 
-    //var mobile = /^(01|02|03|04|05|06|08|0033|\+33)[0-9]{8}/;
-    var mobile = /(0|\+33\s?)[6|7](\s?\d{2}){4}/;
+    var mobile = /^(01|02|03|04|05|06|08|0033|\+33)[0-9]{8}/;
+    //var mobile = /(0|\+33\s?)[6|7](\s?\d{2}){4}/;
 
     if (!mobile.test(document.getElementById('tel').value))
     {
