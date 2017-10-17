@@ -16,18 +16,27 @@ change.addEventListener('click', function(){
 
 
 //Methode 2 - autre exemple avec la souris
-// change.addEventListener('mouseover', function(){
-//   change.classList.add("newColorMouse") 
-// });
+/*change.addEventListener('mouseover', function(){
+  change.classList.add("newColorMouse") 
+});
 
-// change.addEventListener('mouseout', function(){
-//   change.classList.remove("newColorMouse") 
-// });
+change.addEventListener('mouseout', function(){
+  change.classList.remove("newColorMouse") 
+});*/
+
+
+
+
+
+
+
+
+
+
 
 
 var keyup = document.querySelector("#firstname");
-     keyup.addEventListener('keyup', function (e) {
-        console.log(String.fromCharCode(e.keyCode))
+     keyup.addEventListener('keyup', function () {
 
     if (keyup.value.length > 0) {
       keyup.style.backgroundColor="white";
@@ -36,6 +45,20 @@ var keyup = document.querySelector("#firstname");
       keyup.style.backgroundColor="red";
     }
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var tel = document.querySelector("#tel");
  tel.addEventListener('keypress', function (e) {
@@ -73,6 +96,18 @@ function keyup() {
 }
 
 /* FIN sur les evenements*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 function verif()
 {
@@ -114,7 +149,6 @@ function verif()
     }
 
     var mobile = /^(01|02|03|04|05|06|08|0033|\+33)[0-9]{8}/;
-    //var mobile = /(0|\+33\s?)[6|7](\s?\d{2}){4}/;
 
     if (!mobile.test(document.getElementById('tel').value))
     {

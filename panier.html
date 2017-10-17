@@ -14,22 +14,33 @@
     function sum_elements(){
         var somme=0;
         var result = document.getElementById('somme');
+        var maxLength =  document.querySelectorAll('input[id^="el_"]');
+        
         for(var i = 1; i<=6; i++){
             var element = document.getElementById('el_'+i);
+            //console.log(element);
+
             if(element.value!='' && !isNaN(element.value)){
-                somme += parseInt(element.value);
+                somme += parseFloat(element.value);
 
             }
 
         }
         result.value = somme;
+        console.log(maxLength);
     }
+
+
+
+
+
+
+
 
     // Total Panier 
     function sum_elements_panier(){
 
         var elements = document.querySelectorAll('.totalAPayer');
-        var netAPayer = 0;
 
         elements.forEach(function(element) {
             if ( (element.value != '' && !isNaN(element.value)) ) {
@@ -135,25 +146,16 @@
     </footer>
     <script type="text/javascript" src="js/panier.js"></script>
     <script>
-    /* Appel de la methode pour executer le js et avoir le champ total*/
-        aPayerParArticle();
-        //sum_elements_panier();
+    /* Appel de la methode pour executer le js*/
+        //aPayerParArticle();
 
-        // rendre actif l'evenement  lors du chargement de la page // NE MARCHE PAS SI ON LE MET EN HAUT DE PAGE
+        // rendre actif l'evenement  lors du chargement de la page 
         document.querySelectorAll('.facturations .watch').forEach(function(field) {
             field.onkeyup = function() {
-            //field.oninput = function() {
                 aPayerParArticle();
-                sum_elements_panier();
             };
         }); 
 
-        // Total Panier à payer:
-        // document.querySelectorAll('.totalPanier').forEach(function(field) {
-        //     field.onkeyup = function() {
-        //         sum_elements_panier();
-        //     };
-        // });
     </script>
   </body>
 </html>
