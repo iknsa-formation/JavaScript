@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>JavaScript Course - IKNSA</title>
+    <title>JavaScript Course</title>
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="js/contact.js"></script>
   </head>
@@ -33,8 +33,8 @@
         <form method="post"   name="formul"  onSubmit="return verif();" action="#" > 
             <div class="form-group zoneRadio">
                 <label>Title</label>
-                <input type="radio" name="title" id="mr" tabindex="1"><span>Mr.</span>
-                <input type="radio" name="title" id="miss" tabindex="3"><span>Miss.</span>
+                <input type="radio" name="title" id="mr" ><span>Mr.</span>
+                <input type="radio" name="title" id="miss" ><span>Miss.</span>
             </div>
 
             <div class="form-group">
@@ -64,10 +64,9 @@
             </div>
 
             <div class="form-group zoneCheckbox">
-                <label for="tnc">Terms and Conditions</label>
-                <input type="checkbox" name="tnc" id="tnc"><span>Agree</span><br>
-                <label for=""></label>
-                <input type="checkbox" name="nottnc" id="nottnc"><span>Read</span>
+                <label for="agree">Terms and Conditions</label>
+                <input type="radio" name="agree" id="tnc"><span>Agree</span>
+                <input type="radio" name="agree" id="nottnc"><span>Read</span>
             </div>
             
             <div class="required-fields">

@@ -1,8 +1,20 @@
 function verif()
 {
+
+  console.log('test');
+console.log(document.getElementById('tnc').checked);
+    var mentions = document.getElementById('tnc').checked;
+    if (!mentions )  {
+   
+      alert("vous devez accepté les mentions légales !");
+      document.formul.agree.focus();
+      document.formul.agree.style.backgroundColor = "#f2dede";
+      return false;
+    }
+    
     var male = document.getElementById('mr').checked;
     var female = document.getElementById('miss').checked;
-    console.log(male)
+    
     if (!male && !female)  {
    
       alert("vous devez selectionné votre civilité");
@@ -55,12 +67,4 @@ function verif()
       
     }
 
-    var checked = document.getElementById('tnc').checked;
-    if (!checked )  {
-   
-      alert("vous devez accepté les mentions légales !");
-      document.formul.tnc.focus();
-      document.formul.tnc.style.backgroundColor = "#f2dede";
-      return false;
-    }
 }
