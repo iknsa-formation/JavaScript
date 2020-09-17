@@ -32,12 +32,13 @@
                 ans : 'Oui'
             }
         ];
-
+        
         for(i=0;i<questions.length; i++){
+
             if(prompt(questions[i].ques).toLowerCase() === questions[i].ans.toLowerCase()) {
                 console.log('Bonne réponse pour la question ' + questions[i].ques);
             } else {
-                console.log('Faux. La bonne réponse à la question ' + questions[i].ques + ' était ' + questions[i].ans)
+                console.log('Faux! La bonne réponse à la question ' + questions[i].ques + ' était ' + questions[i].ans)
             }
         }
     </script>
