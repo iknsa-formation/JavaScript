@@ -34,6 +34,31 @@
     }while(j < 3)
 
 
+
+    /* EXEMPLE PROMT*/
+        var nombre_a_deviner = Math.random()*10;
+
+        //Math random = return un decimal
+        // Convertir en Int avec ParseInt ou
+        // Arrouondir avec Math.round
+        var saisi="";
+        console.log(parseInt(nombre_a_deviner));
+        console.log(Math.round(nombre_a_deviner));
+        for (var i = 0; i < nombre_a_deviner; i++) {
+             saisi = prompt('Entrez un nombre')
+            console.log(saisi)
+            if(saisi ==  nombre_a_deviner){
+                alert('Bravo');
+                break;
+            }else{
+             saisi = prompt('echec')
+                //alert('KO');
+            }
+        }
+
+    /* EXEMPLE PROMT*/
+
+
     // Exemple avec les objets
     var admis =  true;
     var etudiants = [
@@ -63,7 +88,7 @@
     console.log(etudiants[2])
     console.log(etudiants[3])*/
 
-    /*console.log('Liste des etudiants')
+    console.log('Liste des etudiants')
     for (var i = 0; i < etudiants.length; i++) {
     	//console.log(etudiants[i])
 
@@ -80,15 +105,15 @@
     	else{
     		console.log(etudiant.nom + ' est non admis')
     	}
-    }*/
+    }
 
     // Nombre Premier
     /**
      * Un nombre est premier s'il n'est divible que par 1 ou lui-méme
      */
-    var nbrePremier = 83
+    var nbrePremier = 3
     for (var i = 2; i < nbrePremier; i++) {
-    	if (nbrePremier % i === 0) {
+    	if (nbrePremier % i == 0) {
     		console.log( nbrePremier + ' n\'est pas premier car il est divible par ' + i)
     		break
     	}
