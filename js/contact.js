@@ -1,9 +1,7 @@
 function verif()
 {
 
-  console.log('test');
-console.log(document.getElementById('tnc').checked);
-    var mentions = document.getElementById('tnc').checked;
+    /*var mentions = document.getElementById('tnc').checked;
     if (!mentions )  {
    
       alert("vous devez accepté les mentions légales !");
@@ -21,7 +19,7 @@ console.log(document.getElementById('tnc').checked);
       document.formul.mr.focus();
       document.formul.mr.style.backgroundColor = "#f2dede";
       return false;
-    }
+    }*/
 
    if(document.formul.firstname.value == "" )  {
      alert("Attention un des champs doit etre rempli \n\n - Nom \n   ");
@@ -41,20 +39,19 @@ console.log(document.getElementById('tnc').checked);
      return false;
     }
 
-    // var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/;
-    // if (regex.test(document.getElementById('email').value))  
-    // {  
-    //   return true;
-    // }
-    // else{
-    //   alert("Entrez email valide!");
-    //   document.formul.email.focus();
-    //   document.formul.email.style.backgroundColor = "#f2dede";
-    //   return false;
-    // }
+     var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/;
+     if (regex.test(document.getElementById('email').value))  
+     {  
+      console.log(regex)
+     }
+     else{
+       alert("Entrez email valide!");
+       document.formul.email.focus();
+       document.formul.email.style.backgroundColor = "#f2dede";
+       return false;
+     }
 
     var mobile = /^(01|02|03|04|05|06|08|0033|\+33)[0-9]{8}/;
-    //var mobile = /(0|\+33\s?)[6|7](\s?\d{2}){4}/;
 
     if (mobile.test(document.getElementById('tel').value))
     {
