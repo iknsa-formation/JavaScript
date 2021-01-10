@@ -1,3 +1,16 @@
+var nom = document.querySelector("#firstname");
+ nom.addEventListener('keyup', function (e) {
+  if (/^[a-zA-Z]*$/.test(nom.value)) {
+  //if ( isNaN(nom.value) ) {
+    document.getElementById('errors').innerHTML = 'ko';
+  }
+  else {
+    e.preventDefault();
+      document.getElementById('errors').innerHTML = '<p style="color:red">Vous n\'avez pas le droit de saisir de caractére Alpha</p>';
+  }
+});
+
+
 var tel = document.querySelector("#tel");
  tel.addEventListener('keyup', function (e) {
   if ( isNaN(tel.value) ) {
@@ -39,7 +52,8 @@ function verif()
      return false;
     }
 
-    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/;
+    //var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})+$/;
+    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,3})*$/;
     if (!regex.test(document.getElementById('email').value))  
     {  
       alert("Entrez email valide!");
