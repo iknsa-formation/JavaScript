@@ -4,6 +4,31 @@
     <meta charset="utf-8">
     <title>JavaScript Course - IKNSA</title>
     <script type="text/javascript">
+
+        var nombre = prompt("Entrez un numero");
+
+        /*if (nombre == 17) {
+            console.log("La police");
+        }
+        else if (nombre == 18) {
+            console.log("Les Pompiers");
+        }
+        else if (nombre == 0800) {
+            console.log("Numero Vert");
+        }
+        else{
+            console.log('Inconnu');
+        }*/
+
+        console.log(nombre);
+        switch(parseInt(nombre)){
+            case 18:
+                alert('case: la police');
+            break;
+            default:
+                alert('KO');
+            break;
+        }
     	
     // Les boucles
     
@@ -33,6 +58,15 @@
     	j++
     }while(j < 3)
 
+    /* Boucle imbriquée */
+    for (var i = 0; i < 5; i++) {
+            console.log("boucle 1 " +i)
+        for (var j = 0; j < 5; j++) {
+            console.log("boucle 2 " +j)
+        }
+    }
+    /* Fin boucle imbriquée */
+
 
 
     /* EXEMPLE PROMT*/
@@ -45,13 +79,13 @@
         console.log(parseInt(nombre_a_deviner));
         console.log(Math.round(nombre_a_deviner));
         for (var i = 0; i < nombre_a_deviner; i++) {
-             saisi = prompt('Entrez un nombre')
+             //saisi = prompt('Entrez un nombre')
             console.log(saisi)
             if(saisi ==  nombre_a_deviner){
                 alert('Bravo');
                 break;
             }else{
-             saisi = prompt('echec')
+             //saisi = prompt('echec')
                 //alert('KO');
             }
         }
