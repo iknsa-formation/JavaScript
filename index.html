@@ -71,28 +71,28 @@
     <script>
         var questions = [
             {
-                ques: 'Est-ce que tu aime le JavaScript ?',
-                ans : 'Oui'
+                question: 'Est-ce que tu aime le JavaScript ?',
+                reponse : 'Oui'
             },
             {
-                ques: 'Le JavaScript est une évolution du Java ?',
-                ans : 'Non'
+                question: 'Le JavaScript est une évolution du Java ?',
+                reponse : 'Non'
             },
             {
-                ques: 'Le JavaScript est proche du Java ?',
-                ans : 'Non'
+                question: 'Le JavaScript est proche du Java ?',
+                reponse : 'Non'
             },
             {
-                ques: 'Le JavaScript est un langage d\'objet par prototypage ?',
-                ans : 'Oui'
+                question: 'Le JavaScript est un langage d\'objet par prototypage ?',
+                reponse : 'Oui'
             },
             {
-                ques: 'Le JavaScript est souvent utilisé coté client ?',
-                ans : 'Oui'
+                question: 'Le JavaScript est souvent utilisé coté client ?',
+                reponse : 'Oui'
             },
             {
-                ques: 'Le JavaScript peut être utilisé coté client et serveur ?',
-                ans : 'Oui'
+                question: 'Le JavaScript peut être utilisé coté client et serveur ?',
+                reponse : 'Oui'
             }
         ];
         var bonneRes = 0;
@@ -100,11 +100,11 @@
 
         for(i=0;i<questions.length; i++){
 
-            if(prompt(questions[i].ques).toLowerCase() === questions[i].ans.toLowerCase()) {
-                console.log('Bonne réponse pour la question ' + questions[i].ques);
+            if(prompt(questions[i].question).toLowerCase() === questions[i].reponse.toLowerCase()) {
+                console.log('Bonne réponse pour la question ' + questions[i].question);
                 bonneRes++;
             } else {
-                console.log('Faux! La bonne réponse à la question ' + questions[i].ques + ' était ' + questions[i].ans)
+                console.log('Faux! La bonne réponse à la question ' + questions[i].question + ' était ' + questions[i].reponse)
                 mauvaiseRes++;
             }
         }
