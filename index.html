@@ -5,6 +5,34 @@
     <title>JavaScript Course - IKNSA</title>
     <script type="text/javascript">
 
+        var nombre = prompt("Saisir nombre");
+
+      for (var i = 0; i < 11; i++) {
+        var mul = "";
+        mul += nombre+"*"+i+"="+nombre*i;
+
+        console.log(mul);
+      }
+    
+        /**
+        * Réaliser un script permettant d'afficher les nombres
+        * de 20 à 0 avec décrémentation de 2 pas 
+        * Exemple 20 - 18 -16 -...
+        */
+var index = 20;
+while(0 <= index){
+    console.log(index);
+    index = index-2;
+}
+ for (i=20; i>=0; i-=2)
+    {
+    if(i!=0)
+    {
+    document.writeln(i+" - ");
+    }
+    else{document.writeln(i);
+    }
+   }
         var nombre = prompt("Entrez un numero");
 
         /*if (nombre == 17) {
