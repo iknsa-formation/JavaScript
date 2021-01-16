@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animations Javascript</title>
+		<style>
+			img{	height: 200px;	width: 300px;	}
+			div{			height: 200px;	width: 300px;	border: 3px solid;	margin-bottom: 30px;	margin-top: 30px;	position: relative;	}
+			.bleu{	background-color: blue;	}
+			.vert{	background-color: green;}
+			.jaune{		background-color: yellow;}
+			.marron{background-color: cyan;	}
+			.black{	background-color: black;color: white;text-align: center;}
+			label{	display: inline-block;	width: 100px;}
+			input{	width: 100px;}
+			label, input{	margin-bottom: 5px;}
+			.rose{	background-color: pink;	width: 50px;height: 20px;	float: left;	margin-left: 20px;}
+		</style>
+	</head>
+	<body style="">
+		<!-- écriture du JS dans un attribut d'évenement HTML -->
+		
+		<button onclick="deplacement()">Deplacement !</button>
+		<br style="clear: both;">
+		<div class="rose"></div>
+		<div class="rose"></div>
+		<div class="rose"></div>
+		<div class="rose"></div>
+		<div class="rose"></div>
+		<div class="rose"></div>
+		<div class="rose"></div>
+		<div class="rose"></div>
+		<br style="clear: both;">
+	<script>
+		
+function deplacement() { // voir chapitre des fonctions 
+	var mesCarresRoses = document.getElementsByClassName("rose"); // voir chapitre des variables 
+	var nbreCarresRoses = mesCarresRoses.length; // voir chapitres des Arrays pour la propriété length 
+	for(var i = 0; i < nbreCarresRoses; i++) { // voir chapitre des boucles FOR
+		if(i % 2 === 0) { // voir chapitre des opérateurs arithmétiques et des conditions 
+			mesCarresRoses[i].style.top = "50px"; // voir chapitre des tableaux Arrays 
+		}
+	}
+}
+	</script>
+	</body>
+</html>

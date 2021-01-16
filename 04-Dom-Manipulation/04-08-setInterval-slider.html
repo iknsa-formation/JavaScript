@@ -1,0 +1,24 @@
+<!-- EXERCICE, DEMANDER AUX ETUDIANTS : 
+	1- METTRE DES NOMS DE FICHIER IMAGE QUI NE SOIT PAS 1, 2, 3, 4, 5, etc. => pour cela déclarer un array avec les images et se servir du numéro pour se déplacer au bon indice et récupérer la bonne image.
+	2- METTRE L'IMAGE EN BACKGROUND => Modifier le setAttribute.
+	3- ECRIRE DU TEXTE PAR DESSUS L'IMAGE => en se basant sur l'attribut alt ou une information du tableau array (soit multidimenssionel soit 1 nouveau tableau dédié au texte, correspondant aux indice du tableau contenant les images).
+--> 
+<html>
+	<head>
+		<style>#monimage{ border: 1px solid; max-width: 300px; } </style>
+	</head>
+<body>
+	<img src="imgs/1.jpg" id="monimage"></div>
+<script>
+var img = 0;
+function f(){
+	img +=1;
+	monimage.setAttribute("src","imgs/"+img + ".jpg");
+	console.log(img);
+	if(img == 6) clearInterval(timer); // on s'arrete quand la img fera 500px. on aurait pu mettre un bouton qui déclenche le clearInterval.
+}
+var timer = window.setInterval("f()",3000); // setInterval - permet de rappeler une fonction plusieurs fois. Toutes les 3 secondes.
+</script>
+</body>
+</html>
+	

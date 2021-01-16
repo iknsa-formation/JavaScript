@@ -1,0 +1,45 @@
+<!--
+// Le DOM est un programme (API) interne à notre navigateur qui fait en sorte que chaque élément (balises <h1>, <body>, <p> ...), chaque attribut (href, alt, title ...) de notre document HTML (ou XML), chaque évenement (clic de la souris, chargement de la page ...) de notre navigateur est [un objet] RÉCUPÉRABLE, MANIPULABLE et EXPLOITABLE par un langage de programmation.
+Dans notre cas, c'est le Javascript qui va récupérer chaque "composite" de notre document HTML et l'exploiter.
+
+// Chaque élément du DOM possède ses propres méthodes et ses propres propriétés.
+
+// Chaque fois que l'on utilise le Javascript pour agir sur le navigateur, nous utilisons un objet issu du DOM
+
+// L'objet Window est l'objet qui régi tout le navigateur :
+// window.alert('Salut');
+// window.prompt('Quel age as-tu ?');
+
+// Il est aussi le seul qui peut etre utilisé de manière implicite :
+// alert('Re-salut !');
+
+// L'objet document est l'objet qui gère le document HTML	
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+		<meta charset="utf-8" />
+		<style>
+			h1{text-align: center; padding: 5px 0; background-color: #000; color: #fff;}
+			#rouge, .bleu, .vert{width: 100px; height: 100px;}
+			#rouge{background: red;}
+			.bleu{background: blue;}
+			.vert{background: green;}
+		</style>
+	</head>
+	<body>
+		<h1>Le Document Object Model</h1>
+		<div id="rouge"></div>
+		<div class="bleu"></div>
+		<div id="vert"></div>
+		
+	<script>
+console.info(document);
+var bleu = document.getElementsByClassName('bleu')[0]; // retourne un array-object donc il faut cibler l'index 0
+for (var k in bleu) { // voir les membres de l'objet (tester avec et sans le [0])
+	document.write(k + ' : ' + bleu[k] + '<br>');
+}
+	</script>
+	</body>
+</html>

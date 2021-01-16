@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+    <meta charset="UTF-8">
+    <title>Exemple Javascript</title>
+    <style>
+		body{ overflow: none; }
+        div.move {  position: relative;            border: 2px solid #f43c80;            background: pink;            height: 100px;            width: 100px;  font-size: 15px;  font-weight: bold; padding: 5px;     }
+        h2 {  margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="move" id="move">Appuyer sur les fléches directionnelles de votre clavier.</div>
+	<script>
+	document.onkeydown = clavier; // si une touche du clavier est touché, nous exécutons la fonction nommée "clavier"
+
+	function clavier(e) { // e représente l'événement.
+
+		e = e || window.event;
+
+		if (e.keyCode == '38') { // 38 correspond à la fléche du haut.
+			//console.log('haut');
+			move.style.top = (move.offsetTop - 10) + "px";
+		}
+		else if (e.keyCode == '40') { // 40 correspond à la fléche du bas.
+			//console.log('bas');
+			move.style.top = (move.offsetTop) + "px";
+		}
+		else if (e.keyCode == '37') { // 37 correspond à la fléche de gauche.
+			//console.log('gauche');
+			move.style.left = (move.offsetLeft - 10) + "px";
+		}
+		else if (e.keyCode == '39') { // 39 correspond à la fléche de droite.
+			//console.log('droite');
+			move.style.left = (move.offsetLeft) + "px";
+		}
+	}
+	</script>
+</body>
+</html>

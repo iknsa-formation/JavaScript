@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<style>#div{ border: 5px solid; } </style>
+	</head>
+<body>
+	<div id="div"></div>
+<script>
+var hauteur = 0;
+function f(){
+	hauteur +=5;
+	div.setAttribute("style","height:" + hauteur + "px");
+	console.log(hauteur);
+	if(hauteur == 500) clearInterval(timer); // on s'arrete quand la hauteur fera 500px. on aurait pu mettre un bouton qui déclenche le clearInterval.
+}
+var timer = window.setInterval("f()",100); // permet de rappeler une fonction plusieurs fois.
+</script>
+</body>
+</html>
+	

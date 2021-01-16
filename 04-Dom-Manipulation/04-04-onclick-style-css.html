@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Test syntaxe DOM</title>
+	<style>div{ min-width: 500px; min-height: 300px; border: 3px solid; padding: 50px; } </style>
+</head>
+<body>
+
+<div>
+	<h1>Cliquez dans la div</h1>
+	<p>Paragraphe</p>
+	<p>deuxième paragraphe</p>
+	<p>troisième paragraphe</p>
+</div>
+
+
+<script>
+function modifCSS() {
+ for(var i = 0; i < document.getElementsByTagName("p").length; i++) {
+   document.getElementsByTagName("p")[i].style.border = "solid red 5px";
+   document.getElementsByTagName("p")[i].style.backgroundColor = "#fda500";
+   document.getElementsByTagName("p")[i].style.padding = "15px";
+   document.getElementsByTagName("p")[i].style.color = "#fff";
+   document.getElementsByTagName("p")[i].style.fontSize = "25px";
+ }
+ document.getElementsByTagName("h1")[0].style.display = 'none';
+}
+
+document.getElementsByTagName("div")[0].onclick = modifCSS;
+
+</script>
+
+</body>
+</html>

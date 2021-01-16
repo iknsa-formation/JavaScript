@@ -1,0 +1,13 @@
+<div id="position"></div>
+
+<script>
+    var position = document.getElementById('position');
+  
+    document.addEventListener('mousemove', function(e) {
+        position.innerHTML = 'Position X : ' + e.clientX + 'px<br />Position Y : ' + e.clientY + 'px';
+    }, false);
+</script>
+<!--
+ClientX : position horizontale
+ClientY : position verticale
+-->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animations Javascript</title>
+		<style>.jaune{		background-color: yellow;}		</style>
+	</head>
+	<body style="">
+		<!-- écriture du JS dans un attribut d'évenement HTML -->
+		
+	<script>
+		
+var monP = document.createElement("p"); // je crée un élément <p>
+document.body.appendChild(monP); // j'ajoute l'enfant <p> à <body> (body s'utilise direct sans getElementBy)
+document.getElementsByTagName("p")[0].setAttribute("class", "jaune");
+monP.setAttribute("class", "jaune"); // Version la plus optimisée (100 000 fois plus rapide)
+// test : http://jsperf.com/create-element-vs-get-element
+monP.innerHTML = "voici du texte crée dans mon P";
+
+
+/*
+	Elements du DOM HTML (méthodes, evenements, propriétés) :
+	http://msdn.microsoft.com/en-us/library/ie/hh772721%28v=vs.85%29.aspx
+	
+	Site pour connaitre les valeurs du clavier quand une touche est préssée (+ tuto sur les keyboard events) :
+	http://javascript.info/tutorial/keyboard-events
+*/
+
+
+
+
+	</script>
+	</body>
+</html>

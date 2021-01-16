@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<!-- Exercice : 
+				1 - Créer un formulaire html qui permet de saisir un code couleur dans une case input.
+				2 - Détecter le click sur le submit via une alerte ou la console (pour cela il faut annuler son comportement : pas de rechargement de page).
+				3 - Afficher la saisie du formulaire dans la console ou dans une alerte.
+				
+			Exemple : 
+				4 - Appliquer le code couleur sur l'attribut style de la balise body.
+		-->
+	<body>
+		<form method="post" action="">
+			<input type="text" placeholder="saisir un code couleur" maxlength="6" id="fond">
+			<input type="submit">
+		</form>
+		
+		<script type="text/javascript">		
+		document.querySelector('form').addEventListener("submit", function(event){
+			event.preventDefault(); // annule le rechargement de la page.
+			document.getElementsByTagName('body')[0].setAttribute("style","background:#"+fond.value+";");
+			// autre possibilité : document.body.setAttribute("style","background:#"+fond.value+";");
+		});
+		</script>
+	</body>
+</html>

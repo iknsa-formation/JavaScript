@@ -1,0 +1,23 @@
+<html>
+<body>
+<div id="message">salut</div>
+<div id="message2">bonjour</div>
+<button onclick="changeTexte()">Clic ici</button>
+
+<script>
+function changeTexte()
+{
+	//innerHTML
+	var message = document.getElementById('message');
+	document.getElementById('message').innerHTML = message.innerHTML + ' ça va?';
+	
+	//appendChild + createTextNode
+	document.getElementById('message').appendChild(document.createTextNode(" bien !"));
+	
+	//textContent
+	var message2 = document.getElementById('message2');
+	document.getElementById('message2').textContent = message2.textContent + " tout le monde";
+}
+</script>
+</body>
+</html>

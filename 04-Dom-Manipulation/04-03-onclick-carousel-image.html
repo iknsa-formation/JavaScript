@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animations Javascript</title>
+		<style>
+			img{	height: 200px;	width: 300px;	}
+		</style>
+	</head>
+	<body>
+		<!-- écriture du JS dans un attribut d'évenement HTML -->
+		<div>
+			<img onclick="this.src = 'imgs/c.jpg'; this.title = 'plage deserte';" id="monImage2" src="imgs/c.jpg" title="plage deserte" >
+		</div>
+		<button id="changerImageTitre" >Changer d'image et de title</button><br><br>
+		
+		<div>
+			<img onclick="tourneImage();" id="caroussel" src="imgs/a.jpg" >
+		</div>
+		
+	<script>document.getElementById("changerImageTitre").onclick = function () {
+	document.getElementById("monImage2").src = "imgs/e.jpg";
+	document.getElementById("monImage2").title = "joli chalet";
+};
+
+//--- Exemple avec utilité de variable et condition switch ----
+function tourneImage() {
+	var monImage = document.getElementById("caroussel").getAttribute("src");
+	switch(monImage) { // voir chapitre des conditions switch 
+		case 'imgs/a.jpg' : 
+			document.getElementById("caroussel").src = 'imgs/b.jpg';
+		break;
+		case 'imgs/b.jpg' : 
+			document.getElementById("caroussel").src = 'imgs/c.jpg';
+		break;
+		case 'imgs/c.jpg' : 
+			document.getElementById("caroussel").src = 'imgs/d.jpg';
+		break;
+		case 'imgs/d.jpg' : 
+			document.getElementById("caroussel").src = 'imgs/e.jpg';
+		break;
+		case 'imgs/e.jpg' : 
+			document.getElementById("caroussel").src = 'imgs/a.jpg';
+		break;
+	}
+}
+	</script>
+	</body>
+</html>

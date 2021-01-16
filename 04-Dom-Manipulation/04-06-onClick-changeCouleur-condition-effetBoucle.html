@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animations Javascript</title>
+		<style>
+			img{	height: 200px;	width: 300px;	}
+			div{			height: 200px;	width: 300px;	border: 3px solid;	margin-bottom: 30px;	margin-top: 30px;	position: relative;	}
+			.bleu{	background-color: blue;	}
+			.vert{	background-color: green;}
+			.jaune{		background-color: yellow;}
+			.marron{background-color: cyan;	}
+			.black{	background-color: black;color: white;text-align: center;}
+			label{	display: inline-block;	width: 100px;}
+			input{	width: 100px;}
+			label, input{	margin-bottom: 5px;}
+			.rose{	background-color: pink;	width: 50px;height: 20px;	float: left;	margin-left: 20px;}
+		</style>
+	</head>
+	<body style="">
+		<!-- écriture du JS dans un attribut d'évenement HTML -->
+		<div onclick="changeCouleur();" class="marron"></div>
+		
+	<script>
+function changeCouleur() { // voir chapitre des conditions
+	if(!document.getElementsByClassName("marron")[0].style.backgroundColor) { // voir chapitre des conditions avec if false 
+		document.getElementsByClassName("marron")[0].style.backgroundColor = "brown";
+	}
+	if (document.getElementsByClassName("marron")[0].style.backgroundColor == "brown") {
+		document.getElementsByClassName("marron")[0].style.backgroundColor = "orange";
+	} else {
+		document.getElementsByClassName("marron")[0].style.backgroundColor = "brown";
+	}
+}
+	</script>
+	</body>
+</html>

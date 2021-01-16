@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animations Javascript</title>
+		<style>
+			div{			height: 200px;	width: 300px;	border: 3px solid;	margin-bottom: 30px;	margin-top: 30px;	position: relative;	}
+			.maDiv{	background-color: blue;	}
+		</style>
+	</head>
+	<body style="">
+		<!-- écriture du JS dans un attribut d'évenement HTML -->
+		<div id="maDiv"></div>
+	<script>
+		document.getElementById("maDiv").onmouseover = function () {
+			this.style.backgroundColor = '#ff0000';	// this à voir dans chapitre THIS 
+		};
+		document.getElementById("maDiv").onmouseout = function () {
+			this.style.backgroundColor = '#336699';	// this à voir dans chapitre THIS 
+		};
+	</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script type="text/javascript">
+		function resultat()
+		{
+			if(document.formulaire.pseudo.value.length < 5 || document.formulaire.pseudo.value.length > 15) /* montrer cet exemple */
+			{
+				alert("Le pseudo doit comporter entre 5 et 15 caractères inclus");
+			}
+			if(document.formulaire.mdp.value.length < 5 || document.formulaire.mdp.value.length > 15) /* donnez celui-ci en exercice */
+			{
+				alert("Le mot de passe doit comporter entre 5 et 15 caractères inclus");
+			}
+			if(document.formulaire.pseudo.value.length >= 5 &&  document.formulaire.pseudo.value.length <= 15 && document.formulaire.mdp.value.length >= 5 && document.formulaire.mdp.value.length <= 15) /* donnez celui-ci aussi en exercice */
+			{
+				alert("pseudo: "+document.formulaire.pseudo.value+"\n"+"mdp: "+document.formulaire.mdp.value);
+			}
+		}
+	</script>
+	<form name="formulaire" action="" method="post">
+		<label for="pseudo">Pseudo</label>
+		<input type="text" name="pseudo" id="pseudo" placeholder="pseudo" />
+		<br />
+		<label for="mdp">Mdp</label>
+		<input type="password" name="mdp" id="mdp" placeholder="mdp" />
+		<br />
+		<input type="submit" name="ok" value="ok" onclick="resultat()" />
+	</form>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<!-- il faut absolument utiliser "ParseInt()" sinon en tentant le calcul suivant: 10 + 2 cela affiche 102.
+		parseInt permet d'éviter une concaténation et les considéré en tant que nombre pour un calcul --->
+		<script type="text/Javascript">
+		function calcul()
+		{
+			var saisie1 = parseInt(document.formulaire.saisie1.value);
+			var saisie2 = parseInt(document.formulaire.saisie2.value);
+			
+			if(document.formulaire.operateur.value == '+')
+			{
+				var resultat = saisie1+saisie2;
+			}
+			else if(document.formulaire.operateur.value == '-')
+			{
+				var resultat = saisie1-saisie2;
+			}
+			
+			alert(resultat);
+		}
+		</script>
+
+		<form name="formulaire" action="" method="">
+			<input type="text" name="saisie1" placeholder="saisie1" />
+			<input type="text" name="operateur" placeholder="operateur" />
+			<input type="text" name="saisie2" placeholder="saisie2" />
+			<input type="submit" OnClick="calcul()" />
+		</form>
+	</body>
+</html>

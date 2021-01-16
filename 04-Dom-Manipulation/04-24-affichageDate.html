@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+	<html>
+	<head>
+		<title>Date</title>
+	</head>
+	<body>
+	<script>
+	function AfficheDate() {
+		var nom_mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+		
+		var nom_jour = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+	  
+		var Today = new Date();
+		var date  = Today.getDate();
+
+		var jour  = nom_jour[Today.getDay()];
+		var mois  = nom_mois[Today.getMonth()];
+		var annee = Today.getFullYear();
+		var heures  = Today.getHours();
+		var minutes = Today.getMinutes();
+
+		var HeureActuelle = (heures) + ((minutes<10)?"h0":"h") + minutes;
+	 
+		return (jour + " " + date + " " + mois + " " + annee + " - " + HeureActuelle); // Affichage de la date
+	}
+	</script>
+<body>
+	<p>Nous sommes le : <strong><script>document.write(AfficheDate());</script></strong></p>
+</body>
+</html>
